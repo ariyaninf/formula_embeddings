@@ -31,6 +31,4 @@ python3 v6_order_emb.py \
   --sent_pooling min \
   --error_margin 2 \
   --threshold 1 \
-  --mode_train RP \
-  --model_path output/v6_order_embeddings \
   --patience 3

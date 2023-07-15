@@ -31,6 +31,4 @@ python3 v8_order_emb_1_hidden_layer.py \
   --sent_pooling min \
   --error_margin 2 \
   --threshold 1 \
-  --mode_train EF \
-  --model_path output/v8_order_emb_1_hidden_layer \
   --patience 3 \

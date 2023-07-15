@@ -26,7 +26,6 @@ def init():
     args_parser.add_argument("--out_dim", default=1, type=int)
     args_parser.add_argument("--error_margin", default=2, type=float)
     args_parser.add_argument("--threshold", default=1, type=float)
-    args_parser.add_argument("--mode_train", default='RP', type=str)
     args_parser.add_argument("--model_path", default='output/v6_order_embeddings', type=str)
     args_parser.add_argument("--patience", default=5, type=str)
     args = args_parser.parse_args()
@@ -38,7 +37,7 @@ if __name__ == '__main__':
     # Set parameters
     args = init()
     model_path = os.path.join(args.model_path, 'v6_' + args.bert_version, str(args.max_seq_length),
-                              args.mode_train + "_" + args.dataset + "_" + args.bert_pooling + "_" + args.sent_pooling
+                              args.dataset + "_" + args.bert_pooling + "_" + args.sent_pooling
                               + "_" + str(args.error_margin) + "_" + str(args.threshold))
 
     if not os.path.exists(model_path):

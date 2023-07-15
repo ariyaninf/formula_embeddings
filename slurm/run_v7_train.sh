@@ -32,6 +32,4 @@ python3 v7_order_emb_highdim.py \
   --out_dim 1000 \
   --error_margin 2 \
   --threshold 1 \
-  --mode_train EF \
-  --model_path output/v7_order_emb_HD \
   --patience 3 \

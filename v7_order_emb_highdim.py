@@ -27,8 +27,7 @@ def init():
     args_parser.add_argument("--out_dim", default=1000, type=int)
     args_parser.add_argument("--error_margin", default=2, type=int)
     args_parser.add_argument("--threshold", default=1, type=float)
-    args_parser.add_argument("--mode_train", default='RP', type=str)
-    args_parser.add_argument("--model_path", default='v7_order-emb_HD_rplp', type=str)
+    args_parser.add_argument("--model_path", default='output/v7_order_emb_HD', type=str)
     args_parser.add_argument("--patience", default=5, type=int)
     args = args_parser.parse_args()
     return args
@@ -37,8 +36,8 @@ def init():
 if __name__ == '__main__':
     # Set parameters
     args = init()
-    model_path = os.path.join(args.model_path, 'v7_' + args.bert_version + '_hd_min_oe', str(args.max_seq_length),
-                              args.mode_train + "_" + args.dataset + "_" + args.bert_pooling + "_" + args.sent_pooling
+    model_path = os.path.join(args.model_path, 'v7_' + args.bert_version + '_hd', str(args.max_seq_length),
+                              args.dataset + "_" + args.bert_pooling + "_" + args.sent_pooling
                               + "_" + str(args.out_dim) + "_dim_" + str(args.error_margin) + "_" + str(args.threshold))
 
     if not os.path.exists(model_path):

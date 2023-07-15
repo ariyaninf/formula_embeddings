@@ -28,7 +28,7 @@ def init():
     args_parser.add_argument("--error_margin", default=2, type=float)
     args_parser.add_argument("--threshold", default=1, type=float)
     args_parser.add_argument("--out_dim", default=1000, type=int)
-    args_parser.add_argument("--model_path", default="v8_order_hiddim_24h_rplp", type=str)
+    args_parser.add_argument("--model_path", default="output/v8_order_emb_1_hidden_layer", type=str)
     args_parser.add_argument("--patience", default=3, type=int)
     args = args_parser.parse_args()
     return args
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     args = init()
 
     model_path = os.path.join(args.model_path, "v8_" + args.bert_version + "_hl_hd",
-                              str(args.max_seq_length), args.mode_train + "_" + args.dataset + "_" + args.bert_pooling
+                              str(args.max_seq_length), args.dataset + "_" + args.bert_pooling
                               + "_" + args.sent_pooling + "_" + str(args.error_margin) + "_" + str(args.out_dim))
     if not os.path.exists(model_path):
         os.makedirs(model_path)
