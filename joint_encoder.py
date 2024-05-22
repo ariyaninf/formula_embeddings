@@ -1,5 +1,5 @@
 from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
-from src.model_v2_cross_encoder import *
+from src.model_joint_encoder import *
 from src.loader_v2 import *
 from transformers import AutoTokenizer, get_linear_schedule_with_warmup
 from tqdm import tqdm, trange
