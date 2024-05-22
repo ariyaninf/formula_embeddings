@@ -1,5 +1,5 @@
 from src.loader import *
-from src.model_v6_rplp import *
+from src.model_order_emb import *
 from transformers import BertTokenizer, AlbertTokenizer, get_linear_schedule_with_warmup
 from transformers.optimization import AdamW
 from tqdm import tqdm, trange
