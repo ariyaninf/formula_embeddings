@@ -1,5 +1,5 @@
 from src.loader import *
-from src.model_v16_joint_prem_oe_tied import *
+from src.model_joint_prem_oe_tied import *
 from transformers import BertTokenizer, get_linear_schedule_with_warmup
 from transformers.optimization import AdamW
 from tqdm import tqdm, trange
