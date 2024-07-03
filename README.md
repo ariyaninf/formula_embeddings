@@ -21,7 +21,10 @@ To run the code, please install all the dependencies using the following command
 pip install -r requirements.txt
 ```
 
-## Data Preparation
+## Prepare the data
+The dataset used in this project can be downloaded [here](https://drive.google.com/drive/folders/1AbPa0b0Y4sh89v_eI_p2fPKszh_0RQTL?usp=sharing). Please download the dataset and extract all the files into the `./dataset/` directory.
+
+The dataset is divided into two main parts: `train_set` and `test_set`. Fine-tuning the model requires the dataset located in `./dataset/train_set`, with folder names corresponding to the captions of the tables and figures in the paper. For example, to reproduce Table 1, use the dataset in the folder `./dataset/training_set/Table_1` to fine-tune the model and in `./dataset/test_set/Table_1` to test the model that has been trained using the corresponding dataset.
 
 ## Run the code
 
