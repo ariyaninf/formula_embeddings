@@ -11,9 +11,15 @@ This project provides code implementations for reproducing the encoding strategi
 4. **Finetuning Joint Premises Order Embeddings** with different parameters.
 5. **Finetuning Joint Premise Bi-Encoder**: This implementation uses BCE Loss.
 
+**Joint Encoder vs. Bi-Encoder**
 The main difference between the Joint Encoder and Bi-Encoder lies in how premises and hypotheses are fed into the model. The Joint Encoder concatenates the set of premises and a hypothesis into a single input sequence. However, in the Bi-Encoder, each premise is encoded separately and then aggregated using min-pooling to construct a single embedding representing all the information in the premises before concatenating with the hypothesis embedding. The following image illustrates the embedding mechanism in the Bi-Encoder.
 ![alt text](blob/bi-encoder_model.jpg)
+
 ## Requirements
+To run the code, please install all the dependencies using the following command:
+```
+pip install -r requirements.txt
+```
 
 ## Data Preparation
 
