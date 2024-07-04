@@ -2,6 +2,10 @@
 
 ## Quick links
 
+* [Overview](#overview)
+* [Requirements](#requirements)
+* [Prepare the data](#prepare-the-data)
+
 ## Overview
 This project provides code implementations for reproducing the encoding strategies described in our [paper](https://aclanthology.org/2024.lrec-main.246/). The experimental code is located in the `./src` directory. The encoding strategies codes include:
 
