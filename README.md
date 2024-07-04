@@ -26,6 +26,10 @@ The dataset used in this project can be downloaded [here](https://drive.google.c
 
 The dataset is divided into two main parts: `train_set` and `test_set`. Fine-tuning the model requires the dataset located in `./dataset/train_set`, with folder names corresponding to the captions of the tables and figures in the paper. For example, to reproduce Table 1, use the dataset in the folder `./dataset/training_set/Table_1` to fine-tune the model and in `./dataset/test_set/Table_1` to test the model that has been trained using the corresponding dataset.
 
+**Dataset Distribution**
+
+To test the robustness of the approach method, we implemented three different dataset distributions: **SAT**, **Rule Priority (RP)**, and **Label Priority (LP)**. The SAT dataset was developed by randomly selecting literals to form a formula, which we then labeled by testing the satisfiability of the formula using an [SAT Solver](http://www.sat4j.org/). We referred to the original paper on implementing RP and LP and used the resources at the following [repo](https://github.com/joshuacnf/paradox-learning2reason). To control the complexity level of each problem instance, we used parameters such as the number of literals, the number of vocabularies used to translate each literal into natural sentences, and the number of premises. We used the same parameters to generate SAT, RP, and LP data. The detail configuration for each test scenario is explained in Section 5 of our paper.
+
 ## Run the code
 
 ### Quick start
